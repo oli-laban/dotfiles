@@ -1,0 +1,33 @@
+[user]
+    name = Oli Laban
+    email = oli@olilaban.dev
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAdmL9mdyar569t4SnezHuxE6PK0T6HbxDtXXGrJdPpS
+[gpg]
+    format = ssh
+[gpg "ssh"]
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[core]
+    editor = vim
+    excludesfile = ~/.dotfiles/.gitignore_global
+    ignorecase = false
+[init]
+    defaultBranch = main
+[commit]
+    gpgsign = true
+[push]
+    default = simple
+    followTags = true
+[pull]
+    rebase = true
+[rerere]
+    enabled = true
+[branch]
+    autosetuprebase = always
+[help]
+    autocorrect = 1
+[diff]
+    tool = icdiff
+[difftool]
+    prompt = false
+[difftool "icdiff"]
+    cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
