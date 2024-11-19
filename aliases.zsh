@@ -20,6 +20,7 @@ alias projects="cd $HOME/projects"
 # Shortcuts
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias reloadshell="omz reload"
+alias 
 
 # Utils
 alias cat="bat"

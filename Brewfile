@@ -1,5 +1,4 @@
 # Taps
-tap 'hashicorp/tap'
 tap 'homebrew/bundle'
 
 # Binaries
@@ -11,12 +10,11 @@ brew 'coreutils'
 brew 'gh'
 brew 'git'
 brew 'grep'
-brew 'hashicorp/tap/hashicorp-vagrant'
 brew 'httpie'
 brew 'icdiff'
 brew 'mas'
 brew 'oniguruma'
-brew 'openssl@1.1'
+brew 'openssl'
 brew 'pkg-config'
 brew 'ripgrep'
 brew 'stripe-cli'
@@ -30,7 +28,6 @@ cask '1password'
 cask '1password-cli'
 cask 'brave-browser'
 cask 'claude'
-cask 'colorsnapper'
 cask 'figma'
 cask 'folx'
 cask 'herd'
@@ -43,6 +40,7 @@ cask 'slack'
 cask 'spotify'
 cask 'tableplus'
 cask 'transmit'
+cask 'vagrant'
 cask 'virtualbox'
 cask 'warp'
 cask 'yaak'
@@ -50,7 +48,6 @@ cask 'zoom'
 
 # App Store Apps
 mas 'Amphetamine', id: 937984704
-mas 'Giphy Capture', id: 668208984
 
 # Fonts
 cask 'font-lato'
