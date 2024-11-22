@@ -34,4 +34,4 @@ brew tap homebrew/bundle
 brew bundle --file ./Brewfile
 
 # Set macOS defaults
-source ./.macos
+source ./macos.sh
