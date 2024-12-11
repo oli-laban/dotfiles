@@ -77,6 +77,9 @@ defaults write -g NSUserKeyEquivalents -dict-add "Show Next Tab" "@~\\U2192"
 # Add keyboard shortcut `⌘ + option + left` to show the previous tab, globally.
 defaults write -g NSUserKeyEquivalents -dict-add "Show Previous Tab" "@~\\U2190"
 
+# Swap fn key behaviour (default to F1, F2 etc.)
+defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
+
 ################################################################################
 # Spotlight                                                                    #
 ################################################################################
