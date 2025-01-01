@@ -14,8 +14,11 @@ if test ! $(which brew); then
 fi
 
 # Replace existing .zshrc with the .zshrc from .dotfiles/
-rm -rf $HOME/.zshrc
-ln -sw $HOME/.dotfiles/.zshrc $HOME/.zshrc
+ln -sf $HOME/.dotfiles/.zshrc $HOME/.zshrc
+
+# Link Ghostty config
+mkdir -p $HOME/.config/ghostty
+ln -sf $HOME/.dotfiles/ghostty.conf $HOME/.config/ghostty/config
 
 # Backup existing .gitconfig if it exists
 if [ -f "$HOME/.gitconfig" ]; then
