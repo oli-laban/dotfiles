@@ -30,7 +30,8 @@ alias projects="cd $HOME/projects"
 
 # Shortcuts
 alias copyssh="op read 'op://Personal/SSH Key/public key' | tee >(pbcopy)"
-alias reloadshell="omz reload" 
+alias reloadshell="omz reload"
 
 # Utils
 alias cat="bat"
+alias ls="eza $eza_params -alh --git --group-directories-first --icons=always"
