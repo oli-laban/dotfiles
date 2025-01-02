@@ -30,7 +30,6 @@ alias projects="cd $HOME/projects"
 
 # Shortcuts
 alias copyssh="op read 'op://Personal/SSH Key/public key' | tee >(pbcopy)"
-alias reloadshell="omz reload"
 
 # Utils
 alias cat="bat"

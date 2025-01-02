@@ -20,6 +20,10 @@ ln -sf $HOME/.dotfiles/.zshrc $HOME/.zshrc
 mkdir -p $HOME/.config/ghostty
 ln -sf $HOME/.dotfiles/ghostty.conf $HOME/.config/ghostty/config
 
+# Link Vim config
+mkdir -p $HOME/.config/ideavim
+ln -sf $HOME/.dotfiles/.ideavimrc $HOME/.config/ideavim/ideavimrc
+
 # Backup existing .gitconfig if it exists
 if [ -f "$HOME/.gitconfig" ]; then
     mv "$HOME/.gitconfig" "$HOME/.gitconfig.backup"
