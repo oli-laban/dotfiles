@@ -95,6 +95,9 @@ export LANG=en_US.UTF-8
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
+# Install atuin
+eval "$(atuin init zsh)"
+
 # Initialize starship prompt
 export STARSHIP_CONFIG=~/.dotfiles/starship.toml
 eval "$(starship init zsh)"
