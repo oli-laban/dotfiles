@@ -16,13 +16,13 @@ fi
 # Replace existing .zshrc with the .zshrc from .dotfiles/
 ln -sf $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
-# Link Ghostty config
-mkdir -p $HOME/.config/ghostty
-ln -sf $HOME/.dotfiles/ghostty.conf $HOME/.config/ghostty/config
+# Symlink the .config directories
+for dir in $HOME/.dotfiles/.config/*/; do
+  target="$HOME/.config/$(basename "$dir")"
 
-# Link Vim config
-mkdir -p $HOME/.config/ideavim
-ln -sf $HOME/.dotfiles/.ideavimrc $HOME/.config/ideavim/ideavimrc
+  rm -rf "$target"
+  ln -sf "$dir" "$target"
+done
 
 # Backup existing .gitconfig if it exists
 if [ -f "$HOME/.gitconfig" ]; then
