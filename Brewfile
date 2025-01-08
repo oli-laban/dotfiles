@@ -52,8 +52,6 @@ cask 'tableplus'
 cask 'transmit'
 cask 'vagrant'
 cask 'virtualbox'
-cask 'visual-studio-code'
-cask 'warp'
 cask 'yaak'
 cask 'zoom'
 
