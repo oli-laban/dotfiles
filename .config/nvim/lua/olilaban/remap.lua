@@ -49,3 +49,33 @@ local general_mappings = {
 }
 
 which_key.add(general_mappings)
+
+local telescope_mappings = {
+  { "<leader>ff", telescope.find_files,                                                       desc = "Find files" },
+  { "<leader>fg", telescope.git_files,                                                        desc = "Find git files" },
+  { "<leader>fl", telescope.live_grep,                                                        desc = "Live grep" },
+  { "<leader>fw", function() telescope.grep_string({ search = vim.fn.input("Grep > ") }) end, desc = "Quick grep" }
+}
+
+which_key.add(telescope_mappings)
+
+local harpoon_mappings = {
+  { "<leader>h", hmark.add_file,                desc = "Add file to harpoon" },
+  { "<C-e>",     hui.toggle_quick_menu,         desc = "Toggle harpoon menu" },
+  { "<C-j>",     function() hui.nav_file(1) end },
+  { "<C-k>",     function() hui.nav_file(2) end },
+  { "<C-l>",     function() hui.nav_file(3) end },
+  { "<C-;>",     function() hui.nav_file(4) end },
+}
+
+which_key.add(harpoon_mappings)
+
+local tree_mappings = {
+  { "<leader>tt", ":NvimTreeToggle<CR>",   desc = "Toggle tree" },
+  { "<leader>tf", ":NvimTreeFocus<CR>",    desc = "Focus tree" },
+  { "<leader>tc", ":NvimTreeCollapse<CR>", desc = "Collapse tree" },
+  { "<leader>tb", ":NvimTreeFindFile<CR>", desc = "Fucus current buffer in tree" },
+  { "<leader>tr", ":NvimTreeRefresh<CR>",  desc = "Refresh tree" },
+}
+
+which_key.add(tree_mappings)
