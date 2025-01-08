@@ -44,6 +44,8 @@ local general_mappings = {
   { "<leader>Y",  "\"+Y",                                                 desc = "Copy line to system clipboard" },
   { "<Enter>",    "o<ESC>",                                               desc = "New line below" },
   { "<S-Enter>",  "O<ESC>",                                               desc = "New line above" },
+  { "<leader>u",  vim.cmd.UndotreeToggle,                                 desc = "Toggle undotree" },
+  { "<leader>gs", vim.cmd.Git,                                            desc = "Git status" },
 }
 
 which_key.add(general_mappings)
