@@ -1,4 +1,7 @@
 local which_key = require("which-key")
+local telescope = require("telescope.builtin")
+local hmark = require("harpoon.mark")
+local hui = require("harpoon.ui")
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("user_lsp_attach", { clear = true }),
