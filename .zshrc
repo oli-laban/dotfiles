@@ -96,7 +96,7 @@ export LANG=en_US.UTF-8
 # export ARCHFLAGS="-arch $(uname -m)"
 
 # Install atuin
-eval "$(atuin init zsh)"
+eval "$(atuin init zsh --disable-up-arrow)"
 
 # Initialize starship prompt
 export STARSHIP_CONFIG=~/.dotfiles/starship.toml
