@@ -57,7 +57,8 @@ local telescope_mappings = {
   { "<leader>ff", telescope.find_files,                                                       desc = "Find files" },
   { "<leader>fg", telescope.git_files,                                                        desc = "Find git files" },
   { "<leader>fl", telescope.live_grep,                                                        desc = "Live grep" },
-  { "<leader>fw", function() telescope.grep_string({ search = vim.fn.input("Grep > ") }) end, desc = "Quick grep" }
+  { "<leader>fw", function() telescope.grep_string({ search = vim.fn.input("Grep > ") }) end, desc = "Quick grep" },
+  { "<leader>fh", telescope.help_tags,                                                        desc = "Find help tags" },
 }
 
 which_key.add(telescope_mappings)
