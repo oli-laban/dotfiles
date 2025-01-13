@@ -13,6 +13,11 @@ return {
     "j-hui/fidget.nvim",
   },
   config = function()
+    vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
+      vim.lsp.handlers.hover,
+      { border = 'rounded' }
+    )
+
     local cmp_lsp = require("cmp_nvim_lsp")
     local capabilities = vim.tbl_deep_extend(
       "force",
@@ -74,8 +79,8 @@ return {
         { name = 'buffer',  keyword_length = 3 },
       },
       mapping = cmp.mapping.preset.insert({
-        -- ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-        -- ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+        ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+        ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
         -- ['<C-Space>'] = cmp.mapping.complete(),
       }),
