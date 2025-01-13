@@ -4,6 +4,7 @@ tap 'homebrew/bundle'
 # Binaries
 brew 'atuin'
 brew 'autoconf'
+brew 'awscli'
 brew 'bash'
 brew 'bat'
 brew 'coreutils'
