@@ -6,7 +6,11 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   config = function()
-    require("nvim-tree").setup({})
+    require("nvim-tree").setup({
+      filters = {
+        git_ignored = false
+      }
+    })
 
     local function open_nvim_tree(data)
       local real_file = vim.fn.filereadable(data.file) == 1

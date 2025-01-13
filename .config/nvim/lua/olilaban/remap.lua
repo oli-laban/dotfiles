@@ -54,11 +54,31 @@ local general_mappings = {
 which_key.add(general_mappings)
 
 local telescope_mappings = {
-  { "<leader>ff", telescope.find_files,                                                       desc = "Find files" },
+  -- { "<leader>ff", telescope.find_files,                                                       desc = "Find files" },
+  {
+    "<leader>ff",
+    function() telescope.find_files({ find_command = { "rg", "--files", "--hidden", "--glob", "!.git/*", "--glob", "!.idea/*", "--glob", "!vendor/*", "--glob", "!node_modules/*" } }) end,
+    desc = "Find files"
+  },
+  {
+    "<leader>fvf",
+    function() telescope.find_files({ find_command = { "rg", "--files", "--hidden", "--glob", "!.git/*", "--glob", "!.idea/*" } }) end,
+    desc = "Find files (inc. vendor)"
+  },
   { "<leader>fg", telescope.git_files,                                                        desc = "Find git files" },
-  { "<leader>fl", telescope.live_grep,                                                        desc = "Live grep" },
+  {
+    "<leader>fl",
+    function() telescope.live_grep({ additional_args = { "--hidden", "--glob", "!.git/*", "--glob", "!.idea/*", "--glob", "!vendor/*", "--glob", "!node_modules/*" } }) end,
+    desc = "Live grep"
+  },
+  {
+    "<leader>fvl",
+    function() telescope.live_grep({ additional_args = { "--hidden", "--glob", "!.git/*", "--glob", "!.idea/*" } }) end,
+    desc = "Live grep (inc. vendor)"
+  },
   { "<leader>fw", function() telescope.grep_string({ search = vim.fn.input("Grep > ") }) end, desc = "Quick grep" },
   { "<leader>fh", telescope.help_tags,                                                        desc = "Find help tags" },
+  { "<leader>fr", telescope.lsp_references,                                                   desc = "Find references" }
 }
 
 which_key.add(telescope_mappings)
