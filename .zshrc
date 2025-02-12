@@ -102,6 +102,9 @@ eval "$(atuin init zsh --disable-up-arrow)"
 export STARSHIP_CONFIG=~/.dotfiles/starship.toml
 eval "$(starship init zsh)"
 
+# Set up fzf
+source <(fzf --zsh)
+
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="/Users/oli/Library/Application Support/Herd/config/php/83/"
 
