@@ -1,7 +1,7 @@
 # Laravel
 alias a="php artisan"
 alias stan="./vendor/bin/phpstan analyse"
-alias sail="alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'"
+alias sail="sh $([ -f sail ] && echo sail || echo vendor/bin/sail)"
 alias sa="sail artisan"
 alias sc="sail composer"
 alias sdev="sail npm run dev"

@@ -3,7 +3,7 @@ theme = "catppuccin-mocha"
 font-family = "JetBrainsMono Nerd Font"
 
 macos-option-as-alt = true
-macos-titlebar-style = "tabs"
+macos-titlebar-style = "hidden"
 
 clipboard-read = "allow"
 clipboard-paste-protection = false
