@@ -95,18 +95,18 @@ export LANG=en_US.UTF-8
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
-# Install atuin
+# Start zellij
+# eval "$(zellij setup --generate-auto-start zsh)"
+
+# Initialize atuin
 eval "$(atuin init zsh --disable-up-arrow)"
 
 # Initialize starship prompt
-export STARSHIP_CONFIG=~/.dotfiles/starship.toml
+export STARSHIP_CONFIG=~/.dotfiles/starhip.toml
 eval "$(starship init zsh)"
 
 # Set up fzf
 source <(fzf --zsh)
-
-# Start zellij
-eval "$(zellij setup --generate-auto-start zsh)"
 
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="/Users/oli/Library/Application Support/Herd/config/php/83/"
@@ -126,3 +126,15 @@ export HERD_PHP_74_INI_SCAN_DIR="/Users/oli/Library/Application Support/Herd/con
 
 # Herd injected PHP 8.1 configuration.
 export HERD_PHP_81_INI_SCAN_DIR="/Users/oli/Library/Application Support/Herd/config/php/81/"
+
+
+# Herd injected PHP 8.0 configuration.
+export HERD_PHP_80_INI_SCAN_DIR="/Users/oli/Library/Application Support/Herd/config/php/80/"
+
+
+# Herd injected PHP 8.2 configuration.
+export HERD_PHP_82_INI_SCAN_DIR="/Users/oli/Library/Application Support/Herd/config/php/82/"
+
+
+# Herd injected PHP 8.5 configuration.
+export HERD_PHP_85_INI_SCAN_DIR="/Users/oli/Library/Application Support/Herd/config/php/85/"

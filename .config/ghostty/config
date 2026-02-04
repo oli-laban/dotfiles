@@ -1,4 +1,4 @@
-theme = "catppuccin-mocha"
+theme = Catppuccin Mocha
 
 font-family = "JetBrainsMono Nerd Font"
 
@@ -9,3 +9,6 @@ clipboard-read = "allow"
 clipboard-paste-protection = false
 
 mouse-hide-while-typing = true
+
+maximize = true
+keybind = shift+enter=text:\x1b\r

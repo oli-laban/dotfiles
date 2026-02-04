@@ -1,7 +1,6 @@
 # Laravel
 alias a="php artisan"
 alias stan="./vendor/bin/phpstan analyse"
-alias sail="sh $([ -f sail ] && echo sail || echo vendor/bin/sail)"
 alias sa="sail artisan"
 alias sc="sail composer"
 alias sdev="sail npm run dev"
@@ -32,5 +31,6 @@ alias projects="cd $HOME/projects"
 alias copyssh="op read 'op://Personal/SSH Key/public key' | tee >(pbcopy)"
 
 # Utils
+alias zj="zellij"
 alias cat="bat"
 alias ls="eza $eza_params -alh --git --group-directories-first --icons=always"
